@@ -21,9 +21,8 @@ Template.pollForm.events({
         {  text: event.target.choice3.value, votes: 0 }
       ]
     };
-
-    // create the new poll
-    Polls.insert(newPoll);
+  //create a new poll
+    Meteor.call('addPoll', newPoll);
   }
 
 });
